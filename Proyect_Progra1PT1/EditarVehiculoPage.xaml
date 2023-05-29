@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyect_Progra1PT1.EditarVehiculoPage"
+             Title="Editar Vehículo">
+
+    <StackLayout Padding="20">
+        <Label Text="Marca" />
+        <Entry x:Name="entryMarca" Text="{Binding Marca}" />
+        <Label Text="Modelo" />
+        <Entry x:Name="entryModelo" Text="{Binding Modelo}" />
+        <Label Text="Color" />
+        <Entry x:Name="entryColor" Text="{Binding Color}" />
+        <Label Text="Año" />
+        <Entry x:Name="entryAnio" Text="{Binding Anio}" />
+        <Button Text="Guardar" Clicked="Guardar_Clicked" />
+    </StackLayout>
+
+</ContentPage>

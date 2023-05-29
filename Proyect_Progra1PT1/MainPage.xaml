@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyect_Progra1PT1.MainPage"
+             BackgroundColor = "Gray">
+
+    <ScrollView>
+       
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Button Text="Go to New Page" Clicked="OnButtonClick" />
+            <Button Text="Propiedades" Clicked="EditarPropiedades_Clicked" />
+
+            <Button Text="Cerrar aplicación" Clicked="OnCerrarClicked" HorizontalOptions="EndAndExpand" />
+        
+
+            <Label 
+                  Margin="0,-65,0,0"
+                Text="Seleccione un vehículo:" 
+                 />
+            <Picker x:Name="pickerVehiculos" Title="Elige un vehículo" SelectedIndexChanged="PickerVehiculos_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Sedan</x:String>
+                        <x:String>CuatroPorCuatro</x:String>
+                        <x:String>PickUp</x:String>
+                        <x:String>SUV</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label x:Name="labelMarca" />
+            <Label x:Name="labelModelo" />
+            <Label x:Name="labelColor" />
+            <Label x:Name="labelAnio" />
+            <!-- Agrega los demás controles para mostrar los datos restantes -->
+
+            <Button x:Name="buttonEncender" Text="Encender" />
+            <Button x:Name="buttonApagar" Text="Apagar" />
+            <Button x:Name="buttonAcelerar" Text="Acelerar" />
+            <Button x:Name="buttonFrenar" Text="Frenar" />
+            <Label x:Name="labelEstado" Text="Estado: Apagado" />
+
+          
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
